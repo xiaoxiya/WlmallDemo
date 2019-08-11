@@ -25,8 +25,8 @@ spring:
 #Mybatis的配置文件mapper.xml
 mybatis:
   mapper-locations:
-        - classpath:mapper/*.xml
-        - classpath*:com/**/mapper/*.xml
+    - classpath:mapper/*.xml
+    - classpath*:com/**/mapper/*.xml
 
 #自定义redis key
 redis:
@@ -35,3 +35,11 @@ redis:
           authCode: "portal:authCode:"
         expire:
           authCode: 120 #验证码超期时间
+
+
+#自定义jwt key
+jwt:
+  tokenHeader: Authorization #jwt存储的请求头
+  secret: mySecret #jwt加密使用的密钥
+  expiration: 604800 #jwt的超期时间（60*60*24）
+  tokenHead: Bearer #jwt负载中拿到开头

@@ -1,7 +1,7 @@
 package com.xiaoxiya.wlmalldemoweb.controller;
 
 import com.xiaoxiya.wlmalldemo.service.UmsMemberService;
-import com.xiaoxiya.wlmalldemomodel.Comment.Result;
+import com.xiaoxiya.wlmalldemocommon.common.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

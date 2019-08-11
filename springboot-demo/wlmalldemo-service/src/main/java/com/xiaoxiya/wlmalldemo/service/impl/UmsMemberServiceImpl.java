@@ -3,7 +3,7 @@ package com.xiaoxiya.wlmalldemo.service.impl;
 
 import com.xiaoxiya.wlmalldemo.service.RedisService;
 import com.xiaoxiya.wlmalldemo.service.UmsMemberService;
-import com.xiaoxiya.wlmalldemomodel.Comment.Result;
+import com.xiaoxiya.wlmalldemocommon.common.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

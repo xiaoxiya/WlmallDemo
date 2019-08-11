@@ -1,4 +1,4 @@
-package com.xiaoxiya.wlmalldemomodel.Comment;
+package com.xiaoxiya.wlmalldemocommon.common;
 
 /**
  * @author luopeng
@@ -23,15 +23,15 @@ public class Result<T> {
      */
     private T data;
 
-    public static Result success(Integer code, String message, Object data){
-        return new Result(true,code,message,data);
+    public static <T> Result<T> success(Integer code, String message, Object data){
+        return new Result<T>(true,code,message, (T) data);
     }
 
     public static Result success(String message, Object data){
         return success(0,message,data);
     }
 
-    public static Result success(Object data){
+    public static <T> Result<T> success(Object data){
         return success(0,"成功",data);
     }
 
@@ -48,6 +48,23 @@ public class Result<T> {
 
     public static Result error(){
         return new Result(false,-1,"失败",null);
+    }
+    /**
+     * 未登录返回结果
+     */
+    public static <T> Result<T> unauthorized(T data) {
+        return new Result<T>(false,-1, "暂未登录或token已经过期", data);
+    }
+
+    /**
+     * 未授权返回结果
+     */
+    public static <T> Result<T> forbidden(T data) {
+        return new Result<T>(false,-1,"没有相关权限",data);
+    }
+
+    public static <T> Result<T> validateFailed(String s) {
+        return new Result<T>(false,-1, s, null);
     }
 
     public boolean isStatus() {

@@ -1,6 +1,7 @@
 package com.xiaoxiya.wlmalldemoweb.config;
 
-import lombok.extern.java.Log;
+
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -13,7 +14,7 @@ import java.util.List;
 /**
  * mybatis反向工程生成代码配置类
  */
-@Log
+@Slf4j
 public class Generator {
     public static void main(String[] args) throws Exception {
         //生成代码 执行过程中的警告信息

@@ -5,6 +5,7 @@ import com.xiaoxiya.wlmalldemomodel.entity.UmsAdminExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+
 public interface UmsAdminMapper {
     long countByExample(UmsAdminExample example);
 

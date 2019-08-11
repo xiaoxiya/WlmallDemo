@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * 添加ComponentScan注解扫描指定目录以及子目录，可解决多模块下springboot启动类无法加载其他模块bean的问题
  */
 @SpringBootApplication
-@MapperScan("com.xiaoxiya.wlmalldemomodel.dao")
+@MapperScan({"com.xiaoxiya.wlmalldemomodel.dao","com.xiaoxiya.wlmalldemomodel.mydao"})
 @ComponentScan(value="com.xiaoxiya")
 public class WlmalldemowebApplication {
 

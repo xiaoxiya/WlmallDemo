@@ -24,5 +24,11 @@
             <artifactId>spring-context</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- 依赖wlmalldemo-common-->
+        <dependency>
+            <groupId>com.xiaoxiya</groupId>
+            <artifactId>wlmalldemocommon</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

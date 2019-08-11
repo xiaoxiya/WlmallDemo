@@ -1,7 +1,7 @@
 package com.xiaoxiya.wlmalldemo.service;
 
-import com.xiaoxiya.wlmalldemomodel.Comment.Result;
 
+import com.xiaoxiya.wlmalldemocommon.common.Result;
 
 /**
  * @author luopeng
