@@ -25,6 +25,9 @@ public class AdminUserDetails implements UserDetails {
         this.permissionList = permissionList;
     }
 
+    /**
+     * 授予权限
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return permissionList.stream()
@@ -43,16 +46,25 @@ public class AdminUserDetails implements UserDetails {
         return umsAdmin.getUsername();
     }
 
+    /**
+     * 返回true表示不过期
+     */
     @Override
     public boolean isAccountNonExpired() {
         return false;
     }
 
+    /**
+     * 返回true表示不加锁
+     */
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    /**
+     * 返回true表示不禁用
+     */
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
