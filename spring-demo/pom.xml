@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>chapter01</module>
+        <module>chapter02</module>
     </modules>
 
     <properties>
@@ -37,8 +38,8 @@
         </dependency>
         <!--log4j日志包 -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache</groupId>
+            <artifactId>slf4j</artifactId>
             <version>1.2.17</version>
         </dependency>
         <!--Spring框架核心库 -->
