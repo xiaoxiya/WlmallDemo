@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- springxml中声明bean的方式，使用<bean>元素并指定class属性-->
+    <!--<bean id="compactDisc" class="com.xiaoxiya.chapter02.xmlconfig.SgtPeppers"/>-->
+
+    <!--装配集合时无法使用spring c命名空间 ,通过构造器（构造方法）注入，强制要求构造器内的属性-->
+    <!--<bean id="compactDisc" class="com.xiaoxiya.chapter02.xmlconfig.BlankDisc">-->
+        <!--<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band"/>-->
+        <!--<constructor-arg value="The Beatles"/>-->
+        <!--<constructor-arg>-->
+            <!--<list>-->
+                <!--<value>Sgt. Pepper's Longly Hearts Club Band</value>-->
+                <!--<value>With a Little Help from My Friends</value>-->
+                <!--<value>Lucy in Sky with Diamonds</value>-->
+                <!--<value>Getting better</value>-->
+                <!--<value>Fixing a 好了r</value>-->
+            <!--</list>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--属性注入（setter） -->
+    <bean id="compactDisc" class="com.xiaoxiya.chapter02.xmlconfig.BlankDisc">
+        <property name="artist" value="Sgt. Pepper's Lonely Hearts Club Band"/>
+        <property name="title" value="The Beatles"/>
+        <property name="tracks">
+            <list>
+                <value>Sgt. Pepper's Longly Hearts Club Band</value>
+                <value>SWith a Little Help from My Friends</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--<bean id="cdPlayer" class="com.xiaoxiya.chapter02.xmlconfig.CDPlayer">-->
+        <!--&lt;!&ndash;注入cdPlayer bean中的bean，通过id引入SgtPeppers&ndash;&gt;-->
+        <!--<constructor-arg ref="compactDisc"/>-->
+    <!--</bean>-->
+
+    <!--通过springc空间引入sgtPeppers -->
+    <bean id="cdPlayer" class="com.xiaoxiya.chapter02.xmlconfig.CDPlayer" c:cd-ref="compactDisc" />
+
+
+
+</beans>
