@@ -22,16 +22,16 @@
     <!--</bean>-->
 
     <!--属性注入（setter） -->
-    <bean id="compactDisc" class="com.xiaoxiya.chapter02.xmlconfig.BlankDisc">
-        <property name="artist" value="Sgt. Pepper's Lonely Hearts Club Band"/>
-        <property name="title" value="The Beatles"/>
-        <property name="tracks">
-            <list>
-                <value>Sgt. Pepper's Longly Hearts Club Band</value>
-                <value>SWith a Little Help from My Friends</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="compactDisc" class="com.xiaoxiya.chapter02.xmlconfig.BlankDisc">-->
+        <!--<property name="artist" value="Sgt. Pepper's Lonely Hearts Club Band"/>-->
+        <!--<property name="title" value="The Beatles"/>-->
+        <!--<property name="tracks">-->
+            <!--<list>-->
+                <!--<value>Sgt. Pepper's Longly Hearts Club Band</value>-->
+                <!--<value>SWith a Little Help from My Friends</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!--<bean id="cdPlayer" class="com.xiaoxiya.chapter02.xmlconfig.CDPlayer">-->
         <!--&lt;!&ndash;注入cdPlayer bean中的bean，通过id引入SgtPeppers&ndash;&gt;-->
@@ -39,7 +39,7 @@
     <!--</bean>-->
 
     <!--通过springc空间引入sgtPeppers -->
-    <bean id="cdPlayer" class="com.xiaoxiya.chapter02.xmlconfig.CDPlayer" c:cd-ref="compactDisc" />
+    <!--<bean id="cdPlayer" class="com.xiaoxiya.chapter02.xmlconfig.CDPlayer" c:cd-ref="compactDisc" />-->
 
 
 
