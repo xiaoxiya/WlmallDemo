@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+    <!--dev profile的bean-->
+    <beans profile="dev">
+        <jdbc:embedded-database id="dataSource" type="H2">
+            <jdbc:script location="classpath:profile/schema.sql" />
+            <jdbc:script location="classpath:profile/test-date.sql" />
+        </jdbc:embedded-database>
+    </beans>
+
+    <!--prod profile的bean-->
+    <beans profile="prod">
+        <jee:jndi-lookup id="dataSource"
+                         lazy-init="true"
+                         jndi-name="jdbc/myDatasource"
+                         resource-ref="true"
+                         proxy-interface="javax.sql.DataSource" />
+    </beans>
+
+</beans>
