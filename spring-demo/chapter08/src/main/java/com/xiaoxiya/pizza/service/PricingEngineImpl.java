@@ -14,7 +14,6 @@ import java.util.Map;
  * @author luopeng
  * @date 2019/10/29 22:42
  */
-@Service("pricingEngine")
 public class PricingEngineImpl implements PricingEngine, Serializable {
 
     private static final Logger logger = Logger.getLogger(PricingEngineImpl.class);

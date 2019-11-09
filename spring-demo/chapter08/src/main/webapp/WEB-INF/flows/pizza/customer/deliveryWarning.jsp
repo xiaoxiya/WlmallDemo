@@ -1,7 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns:jsp="http://java.sun.com/JSP/Page">
-<jsp:output omit-xml-declaration="yes"/>
-<jsp:directive.page contentType="text/html; charset=UTF-8"/>
 <head>
     <title>Spizza</title>
 </head>

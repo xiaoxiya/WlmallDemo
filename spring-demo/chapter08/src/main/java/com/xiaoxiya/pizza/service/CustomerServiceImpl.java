@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
  * @author luopeng
  * @date 2019/10/29 22:27
  */
-@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
     @Override

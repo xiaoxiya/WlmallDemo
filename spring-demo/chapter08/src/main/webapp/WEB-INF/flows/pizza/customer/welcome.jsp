@@ -1,8 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns:jsp="http://java.sun.com/JSP/Page"
     xmlns:from="http://www.springframework.org/tags/form">
-<jsp:output omit-xml-declaration="yes"/>
-<jsp:directive.page contentType="text/html; charset=UTF-8"/>
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
 <head>
     <title>Spizza</title>
 </head>

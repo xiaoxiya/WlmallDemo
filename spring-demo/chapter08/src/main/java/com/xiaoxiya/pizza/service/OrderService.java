@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
  * @author luopeng
  * @date 2019/10/29 22:31
  */
-@Service("orderService")
 public class OrderService {
     private static final Logger logger = Logger.getLogger(OrderService.class);
 

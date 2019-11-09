@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
  * @author luopeng
  * @date 2019/10/29 22:39
  */
-@Service("paymentProcessor")
 public class PaymentProcessor {
     public PaymentProcessor() {
     }

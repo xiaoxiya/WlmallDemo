@@ -29,6 +29,10 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
+    public Customer(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public Integer getId() {
         return id;
     }
