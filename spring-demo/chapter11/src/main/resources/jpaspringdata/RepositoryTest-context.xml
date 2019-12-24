@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 
-	<jpa:repositories base-package="spittr.jpaspringdata" />
+	<jpa:repositories base-package="marcopolo.jpaspringdata" />
 	
 	<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		p:dataSource-ref="dataSource" 

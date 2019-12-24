@@ -41,18 +41,18 @@
           <!--p:defaultDestinationName="spittle.alert.queue"-->
           <!--p:messageConverter-ref="messageConverter" />-->
 
-    <amq:queue id="spittleQueue" physicalName="jms.spittr.alert.queue"/>
+    <amq:queue id="spittleQueue" physicalName="jms.marcopolo.alert.queue"/>
 
-    <amq:topic id="spittleTopic" physicalName="jms.spittr.alert.topic"/>
+    <amq:topic id="spittleTopic" physicalName="jms.marcopolo.alert.topic"/>
 
     <amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616"/>
 
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate"
             c:_0-ref="connectionFactory"
-            p:defaultDestinationName="jms.spittr.alert.queue"/>
+            p:defaultDestinationName="jms.marcopolo.alert.queue"/>
 
     <jms:listener-container>
-        <jms:listener destination="jms.spittr.alert.queue" ref="spittleHandler" method="handleSpittleAlert"/>
+        <jms:listener destination="jms.marcopolo.alert.queue" ref="spittleHandler" method="handleSpittleAlert"/>
     </jms:listener-container>
 
     <bean id="spittleHandler" class="jms.spittr.alert.SpittleAlertHandler"/>

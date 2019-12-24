@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import spittr.hibernate4.RepositoryConfig;
-import spittr.hibernate4.SpittrRepository;
-import spittr.hibernate4.domain.Spitter;
+import marcopolo.hibernate4.RepositoryConfig;
+import marcopolo.hibernate4.SpittrRepository;
+import marcopolo.hibernate4.domain.Spitter;
 
 import java.util.List;
 

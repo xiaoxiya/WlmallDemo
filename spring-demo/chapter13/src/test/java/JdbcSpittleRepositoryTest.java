@@ -10,10 +10,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import spittr.config.RootConfig;
-import spittr.db.SpittleRepository;
-import spittr.domain.Spitter;
-import spittr.domain.Spittle;
+import marcopolo.config.RootConfig;
+import marcopolo.db.SpittleRepository;
+import marcopolo.domain.Spitter;
+import marcopolo.domain.Spittle;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= RootConfig.class)

@@ -19,15 +19,15 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(basePackages="spittr")
+@EnableJpaRepositories(basePackages= "marcopolo")
 public class JpaConfig {
 
   @Bean
   public DataSource dataSource() {
     EmbeddedDatabaseBuilder edb = new EmbeddedDatabaseBuilder();
     edb.setType(EmbeddedDatabaseType.H2);
-    edb.addScript("spittr/db/jpa/schema.sql");
-    edb.addScript("spittr/db/jpa/test-data.sql");
+    edb.addScript("marcopolo/db/jpa/schema.sql");
+    edb.addScript("marcopolo/db/jpa/test-data.sql");
     EmbeddedDatabase embeddedDatabase = edb.build();
     return embeddedDatabase;
   }
@@ -36,7 +36,7 @@ public class JpaConfig {
   public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {
     LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
     emf.setDataSource(dataSource);
-    emf.setPersistenceUnitName("spittr");
+    emf.setPersistenceUnitName("marcopolo");
     emf.setJpaVendorAdapter(jpaVendorAdapter);
     emf.setPackagesToScan("spittr.domain");
     return emf;

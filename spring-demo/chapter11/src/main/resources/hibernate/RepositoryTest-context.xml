@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 
-	<context:component-scan base-package="spittr.hibernate4" />
+	<context:component-scan base-package="marcopolo.hibernate4" />
 
  	<bean id="transactionManager" 
  		class="org.springframework.orm.hibernate4.HibernateTransactionManager"
@@ -20,7 +20,7 @@
 
  	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<property name="packagesToScan" value="spittr.hibernate4.domain" />
+		<property name="packagesToScan" value="marcopolo.hibernate4.domain" />
 		<property name="hibernateProperties">
 			<props>
 				<prop key="dialect">org.hibernate.dialect.H2Dialect</prop>

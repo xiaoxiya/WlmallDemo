@@ -11,10 +11,10 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spittr.config.MethodSecurityConfig;
-import spittr.domain.Spitter;
-import spittr.domain.Spittle;
-import spittr.service.SpittleService;
+import marcopolo.config.MethodSecurityConfig;
+import marcopolo.domain.Spitter;
+import marcopolo.domain.Spittle;
+import marcopolo.service.SpittleService;
 
 import java.util.ArrayList;
 import java.util.Date;

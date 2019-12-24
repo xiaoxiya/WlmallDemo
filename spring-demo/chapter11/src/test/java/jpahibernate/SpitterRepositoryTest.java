@@ -14,9 +14,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 
-import spittr.jpahibernate.JpaConfig;
-import spittr.jpahibernate.SpitterRepository;
-import spittr.jpahibernate.domain.Spitter;
+import marcopolo.jpahibernate.JpaConfig;
+import marcopolo.jpahibernate.SpitterRepository;
+import marcopolo.jpahibernate.domain.Spitter;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes= JpaConfig.class)

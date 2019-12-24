@@ -11,10 +11,10 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spittr.config.JSR250Config;
-import spittr.domain.Spitter;
-import spittr.domain.Spittle;
-import spittr.service.SpittleService;
+import marcopolo.config.JSR250Config;
+import marcopolo.domain.Spitter;
+import marcopolo.domain.Spittle;
+import marcopolo.service.SpittleService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -79,7 +79,7 @@ public class JSR250SpittrServiceSecurity {
 
     private void setupUser(String... privs) {
         SecurityContext securityContext = SecurityContextHolder.getContext();
-        List<GrantedAuthority> authorities = new ArrayList<>();
+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         for (String priv : privs) {
             authorities.add(new SimpleGrantedAuthority(priv));
         }
